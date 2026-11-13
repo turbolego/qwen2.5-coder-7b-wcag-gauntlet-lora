@@ -21,6 +21,14 @@ scaled to the 7B coder base (fits an RTX 1000 with 6GB VRAM at Q4_K_M).
 | **Training data** | 300 fit / 40 val / 155 test rows (495 total, same as 0.8B run) |
 | **License** | Apache 2.0 |
 
+## 256K-context successor (for GitHub Copilot BYOK)
+
+Qwen2.5-Coder-7B is capped at ~33K context and is unusable for GitHub Copilot BYOK
+(needs >=128K + tool calling). The same gauntlet tool-use skill is rebased onto
+**Qwen3-Coder-30B-A3B-Instruct (256K context)** in
+[qwen3-coder-30b-a3b-wcag-gauntlet-lora](https://github.com/hummern/qwen3-coder-30b-a3b-wcag-gauntlet-lora) —
+publish there first; this repo stays as the 7B artifact.
+
 ## Files in this repo
 
 | File | Purpose |
